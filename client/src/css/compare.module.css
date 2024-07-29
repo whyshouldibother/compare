@@ -10,21 +10,22 @@
   place-items: center;
   font-size: 10vw;
   font-weight: bolder;
+  transition-duration: 0.5s;
 }
 
 .left {
   background-color: blue;
-  float: left;
+  float:left;
 }
 
 .right {
   background-color: red;
-  float: right;
+  float:right;
 }
 
 .message {
   position: fixed;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 1vw;
   border: 0.2vw solid black;
   font-size: 5vw;
