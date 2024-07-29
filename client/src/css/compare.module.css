@@ -1,0 +1,62 @@
+.container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.box {
+  position: relative;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 10vw;
+  font-weight: bolder;
+}
+
+.left {
+  background-color: blue;
+  float: left;
+}
+
+.right {
+  background-color: red;
+  float: right;
+}
+
+.message {
+  position: fixed;
+  background-color: white;
+  border-radius: 1vw;
+  border: 0.2vw solid black;
+  font-size: 5vw;
+  color: black;
+  box-sizing: border-box;
+  padding: 2vw;
+  display: grid;
+  place-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .box {
+    height: 100%;
+    width: 50%;
+  }
+  .message {
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    height: 50%;
+    width: 100%;
+  }
+  .message {
+    top: 40%;
+    left: 25%;
+    width: 50%;
+    height: 20%;
+  }
+}

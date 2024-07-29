@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 
+import styles from '../css/compare.module.css';
+
 let entities = [1, 2, 3, 4];
 
 let set = [];
@@ -30,23 +32,23 @@ function Compare(){
       index++;
     } else if(dom.current.children.length<3) {
       const newChildDOMNode = dom.current.ownerDocument.createElement("div"); 
-      newChildDOMNode.className = 'message'
+      newChildDOMNode.className = styles.message
       newChildDOMNode.appendChild(dom.current.ownerDocument.createTextNode("You have reached the end"))
       dom.current.appendChild(newChildDOMNode);
     }
   }
 
   return (
-    <div ref={dom} className={"container"}>
+    <div ref={dom} className={styles.container}>
       <div
-        className="box left"
+        className={`${styles.box} ${styles.left}`}
         onClick={() => {
           next(false);
         }}
         ref={left}
       ></div>
       <div
-        className="box right"
+        className={`${styles.box} ${styles.right}`}
         onClick={() => {
           next(true);
         }}

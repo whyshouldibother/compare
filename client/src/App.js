@@ -2,7 +2,6 @@ import Compare from "./pages/compare";
 import PageNotFound from "./pages/pagenotfound";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import "./App.css";
 
 function App() {
   return (
