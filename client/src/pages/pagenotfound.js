@@ -1,8 +1,8 @@
-import '../css/PageNotFound.css';
+import styles from '../css/PageNotFound.module.css';
 function PageNotFound() {
   return (
-    <div>
-     <div className={'container'}></div>
+    <div className = {styles.container}>
+      <h1>404</h1>
     </div>
   );
 }
