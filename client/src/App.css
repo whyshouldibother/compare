@@ -1,0 +1,40 @@
+.container{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.box{
+  position: relative;
+  height: 100%;
+  width: 50%;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 10vw;
+  font-weight: bolder;
+}
+
+.left{
+  background-color: blue;
+  float:left;
+}
+
+.right{
+  background-color: red;
+  float:right;
+}
+
+.message{
+  position: fixed;
+  background-color: white;
+  border-radius: 1vw;
+  border: 0.2vw solid black;
+  font-size: 5vw;
+  color: black;
+  top:25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  box-sizing: border-box;
+  padding:2vw;
+}
