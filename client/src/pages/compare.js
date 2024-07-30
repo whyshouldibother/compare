@@ -2,10 +2,10 @@ import { useRef, useState } from "react";
 import ReactDOM from "react-dom/server";
 import styles from "../css/compare.module.css";
 
-async function getCount(api) {
-  const request = await fetch(`${api}/api/count?id=1`);
-  const response = await request.json();
-}
+// async function getCount(api) {
+//   const request = await fetch(`${api}/api/count?id=1`);
+//   const response = await request.json();
+// }
 
 const api = process.env.REACT_APP_API_ENDPOINT;
 
@@ -97,14 +97,17 @@ function Compare() {
             <img
               src={`${api}/api/img?id=${maxIndex[0]}`}
               className={styles.smallImg}
+              alt='🏆️🏆️🏆️'
             />
             <img
               src={`${api}/api/img?id=${maxIndex[1]}`}
               className={styles.smallImg}
+               alt='🏆️🏆️'
             />
             <img
               src={`${api}/api/img?id=${maxIndex[2]}`}
               className={styles.smallImg}
+               alt='🏆️'
             />
           </div>
           <h4>Bottom 3</h4>
@@ -112,14 +115,17 @@ function Compare() {
             <img
               src={`${api}/api/img?id=${minIndex[0]}`}
               className={styles.smallImg}
+               alt='🤮🤮🤮'
             />
             <img
               src={`${api}/api/img?id=${minIndex[1]}`}
               className={styles.smallImg}
+               alt='🤮🤮'
             />
             <img
               src={`${api}/api/img?id=${minIndex[2]}`}
               className={styles.smallImg}
+               alt='🤮'
             />
           </div>
         </>
@@ -129,12 +135,12 @@ function Compare() {
       newChildDOMNode.className = styles.message;
       newChildDOMNode.innerHTML = ReactDOM.renderToString(Report);
       dom.current.appendChild(newChildDOMNode);
-      async function post() {
-        const request = await fetch(`${api}/api/compare/`);
-        const response = await request.json();
-      }
+      // async function post() {
+      //   const request = await fetch(`${api}/api/compare/`);
+      //   const response = await request.json();
+      // }
 
-      post();
+      // post();
     }
   }
 

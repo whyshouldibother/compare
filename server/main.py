@@ -39,12 +39,12 @@ def handlePost(data: post):
 
 @app.get("/api/count")
 def handleCount(id):
-    directory = '../storage/test'
+    directory = './storage/test'
     return len([name for name in os.listdir(directory) if os.path.isfile(os.path.join(directory, name))])
 
 @app.get("/api/img")
 def handleImg(id: int):
-    return FileResponse(f'../storage/test/{id}.png')
+    return FileResponse(f'./storage/test/{id}.png')
 
 @app.get("/api/{path}")
 def handlePath(path: str):
