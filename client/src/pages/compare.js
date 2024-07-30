@@ -153,6 +153,7 @@ function Compare() {
           onClick={() => {
             next(false);
           }}
+          style={{cursor:'pointer'}}
           className = {styles.bigImg}
         />
       </div>
@@ -163,6 +164,7 @@ function Compare() {
           onClick={() => {
             next(true);
           }}
+          style={{cursor:'pointer'}}
           className = {styles.bigImg}
         />
       </div>
