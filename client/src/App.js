@@ -6,7 +6,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Compare />}/>
+        <Route path="/" element={<Compare />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </Router>

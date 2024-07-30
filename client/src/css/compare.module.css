@@ -28,12 +28,15 @@
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 1vw;
   border: 0.2vw solid black;
-  font-size: 5vw;
   color: black;
   box-sizing: border-box;
-  padding: 2vw;
   display: grid;
   place-content: center;
+}
+
+.smallImgContainer{
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 @media screen and (min-width: 600px) {
@@ -46,6 +49,22 @@
     left: 25%;
     width: 50%;
     height: 50%;
+    font-size: 1vw;
+    padding: 2vw;
+  }
+  
+  .smallImg{
+    width: 2vw;
+    height: 2vw;
+    border: 0.2vw solid black;
+    border-radius: 1vw;
+  }
+  
+  .bigImg{
+    height: 15vw;
+    width: 15vw;
+    border: 0.3vw solid black;
+    border-radius:10vw ;
   }
 }
 
@@ -55,9 +74,25 @@
     width: 100%;
   }
   .message {
-    top: 40%;
-    left: 25%;
-    width: 50%;
-    height: 20%;
+    top: 25%;
+    left: 5%;
+    width: 90%;
+    height: 50%;
+    padding: 1vw;
+    font-size:4vw;
+  }
+
+  .smallImg{
+    width: 10vw;
+    height: 6vw;
+    border: 0.5vw solid black;
+    border-radius: 1vw;
+  }
+  
+  .bigImg{
+    height: 50vw;
+    width: 75vw;
+    border: 0.3vw solid black;
+    border-radius:10vw ;
   }
 }
