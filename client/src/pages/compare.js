@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 import styles from '../css/compare.module.css';
 
-const api = process.env.REACT_APP_API_ENDPOINT
+const api = process.env.REACT_APP_API_ENDPOINT;
 
 let entities = [1, 2, 3, 4];
 
@@ -39,6 +39,7 @@ function Compare(){
       dom.current.appendChild(newChildDOMNode);
 
       async function post(){
+        alert(api);
         const request =await fetch(`${api}/api/compare/`);
         const response = await request.json();
         alert(response)
