@@ -12,9 +12,10 @@ app = FastAPI()
 #enable cors
 origins = [env["origins"]]
 
-dev = [env["dev"]]
-if (not(dev)):
+dev = env["dev"]
+if (dev != True):
     app = FastAPI(docs_url="/documentation", redoc_url=None)
+
 app.add_middleware(
     CORSMiddleware, 
     allow_origins = origins, 
