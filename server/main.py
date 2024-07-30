@@ -14,13 +14,13 @@ app.add_middleware(
     CORSMiddleware, 
     allow_origins = origins, 
     allow_credentials = True,
-    allow_methods = ["get", "post"],
+    allow_methods = ["*"],
     allow_headers=["*"]
 )
 
 @app.get("/api/{path}")
 def handlePath(path:str):
-    return {"response": path}
+    return {"response": path, "origins":origins}
 
 @app.get("/{path}")
 def handle404(path: str):
