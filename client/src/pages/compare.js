@@ -39,7 +39,6 @@ function Compare(){
       dom.current.appendChild(newChildDOMNode);
 
       async function post(){
-        alert(api);
         const request =await fetch(`${api}/api/compare/`);
         const response = await request.json();
         alert(response)
