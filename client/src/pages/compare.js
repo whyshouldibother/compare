@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 
 import styles from '../css/compare.module.css';
 
+const api = process.env.REACT_APP_API_ENDPOINT
+
 let entities = [1, 2, 3, 4];
 
 let set = [];
@@ -35,6 +37,15 @@ function Compare(){
       newChildDOMNode.className = styles.message
       newChildDOMNode.appendChild(dom.current.ownerDocument.createTextNode("You have reached the end"))
       dom.current.appendChild(newChildDOMNode);
+
+      async function post(){
+        const request =await fetch(`${api}/api/compare/`);
+        const response = await request.json();
+        alert(response)
+      }
+
+      post();
+
     }
   }
 
