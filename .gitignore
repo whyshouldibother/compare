@@ -1,5 +1,4 @@
 .vercel
 */.vercel
-*/.*
 
 */node_modules
