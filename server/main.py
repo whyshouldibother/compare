@@ -13,7 +13,7 @@ app = FastAPI()
 origins = [env["origins"]]
 
 dev = env["dev"]
-if (dev != True):
+if (dev != 'True'):
     app = FastAPI(docs_url="/documentation", redoc_url=None)
 
 app.add_middleware(
